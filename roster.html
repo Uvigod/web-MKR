@@ -1,91 +1,46 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MKR | Roster</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+<!DOCTYPE html><html lang='es'><head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>MKR - Miktlan Riders</title>
+<link rel='stylesheet' href='css/style.css'>
+</head><body>
 <header class="header">
-<nav class="nav">
+<nav class="nav container">
 <a href="index.html" class="brand">
 <img src="img/logo.png" alt="MKR Logo">
-<div class="brand-text">
-<span class="brand-title">MKR</span>
-<span class="brand-subtitle">Miktlan Riders</span>
+<div>
+<h2>MKR</h2>
+<span>Miktlan Riders</span>
 </div>
 </a>
+
+<button class="menu-toggle">☰</button>
+
+<div class="menu">
+<a href="index.html">Inicio</a>
+<a href="roster.html">Roster</a>
+<a href="staff.html">Staff</a>
+<a href="tryouts.html">Tryouts</a>
+<a href="torneos.html">Torneos</a>
+<a href="contacto.html">Contacto</a>
+<a class="discord" target="_blank" href="https://discord.gg/NVhTcRVVN">Discord</a>
+</div>
 </nav>
 </header>
 
-<section class="content">
-<h1>ROSTER OFICIAL</h1>
-
-<div class="roster-container">
-
-<div class="player-card">
-<img src="img/players/top.png" alt="Top">
-<div class="player-info">
-<span class="role">TOP</span>
-<h3>Crimson</h3>
-<p>Tanques · Bruisers</p>
-</div>
-</div>
-
-<div class="player-card">
-<img src="img/players/jg.png" alt="Jungla">
-<div class="player-info">
-<span class="role">JUNGLA</span>
-<h3>Uvi</h3>
-<p>Control de objetivos</p>
-</div>
-</div>
-
-<div class="player-card">
-<img src="img/players/mid.png" alt="Mid">
-<div class="player-info">
-<span class="role">MID</span>
-<h3>SAMID</h3>
-<p>Magos · Asesinos</p>
-</div>
-</div>
-
-<div class="player-card">
-<img src="img/players/adc.png" alt="ADC">
-<div class="player-info">
-<span class="role">ADC</span>
-<h3>Kόσμος</h3>
-<p>Carry principal</p>
-</div>
-</div>
-
-<div class="player-card">
-<img src="img/players/sup.png" alt="Support">
-<div class="player-info">
-<span class="role">SUPPORT</span>
-<h3>Skevenger</h3>
-<p>Engage · Peel</p>
-</div>
-</div>
-
+<section class='container section'>
+<h1 class='section-title'>Roster Oficial</h1>
+<div class='cards'>
+<div class='card reveal'><h3>TOP</h3><p>Crimson</p></div>
+<div class='card reveal'><h3>JUNGLA</h3><p>Uvi</p></div>
+<div class='card reveal'><h3>MID</h3><p>SAMID</p></div>
+<div class='card reveal'><h3>ADC</h3><p>Kόσμος</p></div>
+<div class='card reveal'><h3>SUPPORT</h3><p>Skevenger</p></div>
 </div>
 </section>
 
-<script>
-const cards = document.querySelectorAll('.player-card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-cards.forEach(card => observer.observe(card));
-</script>
-
-</body>
-</html>
+<footer>
+<p>¿Te atreves a entrar al Miktlan?</p>
+<p>© 2026 MKR - Miktlan Riders</p>
+</footer>
+<script src="js/main.js"></script>
+</body></html>
